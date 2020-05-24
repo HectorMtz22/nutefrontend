@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', 'Helvetica', sans-serif;
+	text-decoration: none;
+}
+body {
+	background-color: #eee;
+	background-image: linear-gradient(45deg, #455e8d 25%, transparent 25%, transparent 75%, #455e8d 75%, #455e8d),
+	linear-gradient(45deg, #455e8d 25%, transparent 25%, transparent 75%, #455e8d 75%, #455e8d);
+	background-size: 60px 60px;
+	background-position: 0 0, 30px 30px;
+	background-attachment: fixed;
+	padding-top: 40px;
+}
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif; }
+a { color: #fff; }
+ul { list-style-type: none; }
+
+header {
+	top: 0;
+	left: 0;
+	right: 0;
+}
+header, footer {
+	background: #1C2433;
+	padding: 2px 5%;
+	position: fixed;
+}
+header h2 {
+	display: inline;
+}
+.mobile-header {
+	float: right;
+	margin-top: 2px;
+}
+.mobile-header span {
+	padding: 0px 10px;
+	font-size: 1.2em;
+	transition: all 300ms ease;
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+form {
+    width: 90vw;
+    min-width: 300px;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgb(90, 90, 90);
+}
+
+.form {
+	border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.form main {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.form input, .form textarea, .form select  {
+    width: 100%;
+    height: 45px;
+    font-size: 1.2em;
+    padding: 20px 2px 0px;
+    color: #595f6e;
+    border: none;
+    outline: 0;
+}
+.form select {
+	background: #fff;
+}
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000;
+}
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: all 300ms ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 300ms ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+    transform: translateY(-100%);
+    font-size: 14px;
+}
+.form input:focus + .label-name .content-name {
+    color: #5fa8d3;
+}
+.form input:focus + .label-name::after {
+    transform: translateX(0%);
+}
+
+.form .check input {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.form .check label {
+	padding-left: 25px;
+	cursor: pointer;
+	pointer-events: all;
+}
+
+.form textarea {
+	resize: vertical;
+	min-height: 70px;
+	max-height: 100px;
+}
+.form .textarea .content-name {
+	top: 10px;
+}
+.form textarea:focus + .label-name .content-name,
+.form textarea:valid + .label-name .content-name {
+    transform: translateY(-10px);
+    font-size: 14px;
+}
+.form textarea:focus + .label-name .content-name {
+    color: #5fa8d3;
+}
+.form textarea:focus + .label-name::after {
+    transform: translateX(0%);
+}
+.form > a > span {
+	color: #000;
+}
+button {
+	width: 100%;
+	padding: 2px;
+	margin-top: 10px;
+	font-size: 1.1em;
+	color: #1C2433;
+	border: 2px solid #1C2433;
+	border-radius: 5px;
+	background: #fff;
+	cursor: pointer;
+	outline: none;
+	transition: all 300ms ease;
+	&:hover {
+		color: rgb(185, 13, 13);
+		border: 2px solid rgb(185, 13, 13);
+	}
+}
+
+.grid-3 {
+	width: 95%;
+	max-width: 1000px;
+	margin: 10px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+.grid-3 section {
+	padding: 10px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0px 0px 5px #686868;
+}
+.grid-3 img {
+	float: right;
+	width: 20px;
+	margin: 0px 3px;
+	cursor: pointer;
+}
+
+footer {
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.mobile-footer {
+	font-size: 0.4em;
+	display: none;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	text-align: center;
+}
+.mobile-footer img {
+	width: 30px;
+}
+footer > p {
+	display: block;
+}
+
+.invisible {
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+	.mobile-header {
+		display: none;
+	}
+	.mobile-footer {
+		display: grid;
+	}
+	.invisible {
+		display: none;
+	}
+	.visible {
+		display: block;
+	}
+	footer > p {
+		display: none;
+	}
+	.grid-3 {
+		margin: 5px auto;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+}
+
+#logo {
+	margin-top: 4px;
+    animation:  logofill 0.5s ease forwards 2s;
+}
+#logo path:nth-child(1) {
+    stroke-dasharray: 97.5989990234375;
+    stroke-dashoffset: 97.5989990234375;
+    animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2) {
+    stroke-dasharray: 70.93333435058594;
+    stroke-dashoffset: 70.93333435058594;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(3) {
+    stroke-dasharray: 52.9651985168457;
+    stroke-dashoffset: 52.9651985168457;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(4) {
+    stroke-dasharray: 78.80467224121094;
+    stroke-dashoffset: 78.80467224121094;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes logofill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #fff;
+    }
+}
+
+#preloader5{
+    position:relative;
+    width:30px;
+    height:30px;
+    background:#3498db;
+    border-radius:50px;
+    animation: preloader_5 1.5s infinite linear;
+}
+#preloader5:after{
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-top:10px solid #9b59b6;
+    border-bottom:10px solid #9b59b6;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-radius:50px;
+    content:'';
+    top:-20px;
+    left:-20px;
+    animation: preloader_5_after 1.5s infinite linear;
+}
+@keyframes preloader_5 {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);background:#2ecc71;}
+    100% {transform: rotate(360deg);}
+}
+@keyframes preloader_5_after {
+    0% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+    50% {border-top:10px solid #3498db;border-bottom:10px solid #3498db;}
+    100% {border-top:10px solid #9b59b6;border-bottom:10px solid #9b59b6;}
+}
+
+.loader {
+	width: 40px;
+	background: #fff;
+	margin: 20px auto;
+	box-shadow: 0px 0px 20px rgb(90, 90, 90);
+	display: flex;
+	justify-content: center;
+}

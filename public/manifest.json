@@ -1,0 +1,30 @@
+{
+  "short_name": "Nüte",
+  "name": "Nüte",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "67x67",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#141924",
+  "background_color": "#1C2433"
+}
